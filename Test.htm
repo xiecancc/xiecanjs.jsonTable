@@ -3,7 +3,7 @@
 <head>
     <title></title>
     <script src="jquery-3.4.1.js" type="text/javascript"></script>
-    <script src="xiecanjs.jQTable.js" type="text/javascript"></script>
+    <script src="xiecanjs.jsonTable.js" type="text/javascript"></script>
     <style type="text/css">
         .delete
         {
@@ -47,7 +47,7 @@
             var table = new jsonTable(options);
             table.show();
             table.ondelete = function (key, data) {
-                alert(key + "" + data);
+                alert(key + "" + data.comm);
             }
         });
     </script>
