@@ -53,7 +53,7 @@
         return null;
     }
 
-    this.create = function () {
+    this.show = function () {
         /// <summary>
         /// 根据配置信息，显示数据表
         /// </summary>
