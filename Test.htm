@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="xiecanjs.jQTable.js" type="text/javascript"></script>
+    <style type="text/css">
+        .delete
+        {
+            color: Red;
+            font-size: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var options = {
+                container: "div",
+                id: "ajaxTable",
+                title: "这里是测试标题",
+                key: "id",
+                cols: {
+                    "id": "编号",
+                    "comm": "说明"
+                },
+                rows: [
+                    { id: 1001, comm: "谢灿软件工作室" },
+                    { id: 1002, comm: "http://www.xiecan.cc" }
+                ],
+                detials: {
+                    text: "详情",
+                    display: 1
+                },
+                deletes: {
+                    text: "删除",
+                    display: 1
+                },
+                updates: {
+                    text: "修改",
+                    display: 1
+                },
+                inserts: {
+                    text: "添加",
+                    display: 1
+                }
+            };
+
+            var table = new jsonTable(options);
+            table.create();
+            table.ondelete = function (key, data) {
+                alert(key + "" + data);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
